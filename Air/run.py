@@ -32,7 +32,7 @@ logger = MetricLogger(save_dir)
 
 seed = 64+50000
 counter = 0
-episodes = 10000
+episodes = 100000
 load = torch.load('checkpoints/mario_net_43.chkpt')
 RL.net.load_state_dict(load['model'])
 RL.exploration_rate = load['exploration_rate']

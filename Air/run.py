@@ -1,5 +1,3 @@
-import os
-os.chdir('Air')
 import torch
 import datetime
 from pathlib import Path

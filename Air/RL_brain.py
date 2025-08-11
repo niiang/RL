@@ -65,7 +65,7 @@ class DQN:
         self.curr_step = 0
         self.memory = TensorDictReplayBuffer(storage=LazyMemmapStorage(100000, device=torch.device("cpu")))
         self.batch_size = 32
-        self.save_every = 1e5  # no. of experiences between saving Mario Net
+        self.save_every = 5e5  # no. of experiences between saving Mario Net
         self.optimizer = torch.optim.Adam(self.net.parameters(), lr=0.00025)
         self.loss_fn = torch.nn.SmoothL1Loss()
         self.burnin = 1e4  # min. experiences before training
